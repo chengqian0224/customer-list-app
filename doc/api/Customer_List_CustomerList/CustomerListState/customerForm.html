@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the customerForm method from the CustomerListState class, for the Dart programming language.">
+  <title>customerForm method - CustomerListState class - CustomerList library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">team5_cst2335_project</a></li>
+    <li><a href="../../Customer_List_CustomerList">Customer_List\CustomerList.dart</a></li>
+    <li><a href="../../Customer_List_CustomerList/CustomerListState-class.html">CustomerListState</a></li>
+    <li class="self-crumb">customerForm method</li>
+  </ol>
+  <div class="self-name">customerForm</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="Customer_List_CustomerList&#47;CustomerListState-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">customerForm</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">customerForm</span>(<wbr>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns the form widget used for entering or editing customer details</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Widget customerForm() {
+  return Padding (
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(AppLocalizations.of(context)!.translate(&quot;name&quot;)!),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _firstNameController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;firstName&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;firstName&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 5),
+              Expanded(
+                child: TextField(
+                  controller: _lastNameController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;lastName&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;lastName&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Text(AppLocalizations.of(context)!.translate(&quot;address&quot;)!),
+          Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _streetAddressController,
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.translate(&quot;streetAddress&quot;)!,
+                      labelText: AppLocalizations.of(context)!.translate(&quot;streetAddress&quot;)!,
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ]),
+          SizedBox(height: 5),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _cityController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;city&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;city&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 5),
+              Expanded(
+                child: TextField(
+                  controller: _provinceController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;province&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;province&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 5),
+              Expanded(
+                child: TextField(
+                  controller: _postalCodeController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;postalCode&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;postalCode&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Text(AppLocalizations.of(context)!.translate(&quot;birthday&quot;)!),
+          Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _birthYearController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;year&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;year&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 5),
+              Expanded(
+                child: TextField(
+                  controller: _birthMonthController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;month&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;month&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 5),
+              Expanded(
+                child: TextField(
+                  controller: _birthDayController,
+                  decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.translate(&quot;day&quot;)!,
+                    labelText: AppLocalizations.of(context)!.translate(&quot;day&quot;)!,
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">team5_cst2335_project</a></li>
+    <li><a href="../../Customer_List_CustomerList">CustomerList</a></li>
+    <li><a href="../../Customer_List_CustomerList/CustomerListState-class.html">CustomerListState</a></li>
+    <li class="self-crumb">customerForm method</li>
+</ol>
+
+    <h5>CustomerListState class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    team5_cst2335_project
+      1.0.0+1
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
